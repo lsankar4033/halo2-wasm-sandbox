@@ -1,0 +1,15 @@
+[package]
+name = "halo2-wasm-circuits"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+halo2_proofs = "0.2.0"
+wasm-bindgen = "0.2.79"
+
+# NOTE: necessary because https://docs.rs/getrandom/latest/getrandom/#webassembly-support
+[target.'cfg(target_family = "wasm")'.dependencies]
+getrandom = { version = "0.2", features = ["js"]}

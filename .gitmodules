@@ -1,0 +1,6 @@
+[submodule "halo2-fibo-wasm"]
+	path = halo2-fibo-wasm
+	url = git@github.com:lsankar4033/halo2-fibo-wasm.git
+[submodule "halo2-wasm-circuits"]
+	path = halo2-wasm-circuits
+	url = git@github.com:lsankar4033/halo2-wasm-circuits.git
