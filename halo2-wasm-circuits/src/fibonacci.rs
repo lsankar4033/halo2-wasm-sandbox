@@ -19,7 +19,7 @@ use halo2_proofs::plonk::*;
 use halo2_proofs::poly::Rotation;
 
 #[derive(Clone, Debug, Copy)]
-struct Config {
+pub struct Config {
     elem_1: Column<Advice>,
     elem_2: Column<Advice>,
     elem_3: Column<Advice>,
@@ -137,10 +137,10 @@ impl Config {
     }
 }
 
-#[derive(Default)]
+#[derive(Default, Clone)]
 pub struct FiboCircuit<F: Field> {
-    elem_1: Value<F>, // 1
-    elem_2: Value<F>, // 1
+    pub elem_1: Value<F>, // 1
+    pub elem_2: Value<F>, // 1
 }
 
 impl<F: Field> Circuit<F> for FiboCircuit<F> {
