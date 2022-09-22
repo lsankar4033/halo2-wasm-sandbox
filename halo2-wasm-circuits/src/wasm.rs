@@ -20,6 +20,13 @@ use crate::fibonacci::FiboCircuit;
 
 pub use wasm_bindgen_rayon::init_thread_pool;
 
+extern crate console_error_panic_hook;
+
+#[wasm_bindgen]
+pub fn init_panic_hook() {
+    console_error_panic_hook::set_once();
+}
+
 #[wasm_bindgen]
 pub fn prove_fib(e1: u64, e2: u64, params_ser: JsValue) {
     // create circuit
