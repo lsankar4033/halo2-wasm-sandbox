@@ -4,3 +4,6 @@
 [submodule "halo2-wasm-circuits"]
 	path = halo2-wasm-circuits
 	url = git@github.com:lsankar4033/halo2-wasm-circuits.git
+[submodule "halo2-test-web-client"]
+	path = halo2-test-web-client
+	url = https://github.com/lsankar4033/halo2-test-web-client.git
